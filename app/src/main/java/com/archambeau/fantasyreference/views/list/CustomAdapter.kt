@@ -7,7 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.archambeau.fantasyreference.R
 
-class CustomAdapter (private val dataSet: Array<String>) :
+class CustomAdapter (private var dataSet: List<String>) :
     RecyclerView.Adapter<CustomAdapter.ViewHolder>()
 {
 
@@ -20,6 +20,11 @@ class CustomAdapter (private val dataSet: Array<String>) :
         }
     }
 
+    fun UpdateList(list: List<String>){
+        dataSet = list
+        notifyDataSetChanged()
+    }
+
     override fun onCreateViewHolder(viewGroup : ViewGroup, viewType : Int) : ViewHolder{
         val view = LayoutInflater.from(viewGroup.context)
                                  .inflate(R.layout.text_row_item, viewGroup, false)
@@ -27,7 +32,7 @@ class CustomAdapter (private val dataSet: Array<String>) :
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-
+        holder.textView.text = dataSet[position]
     }
 
     override fun getItemCount() = dataSet.size
