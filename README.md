@@ -1,4 +1,6 @@
 # FantasyReference
-An Android app to list fantasy books. Based on the Google Books API
+An Android wiki for the Legend of Zelda sage.
+
+API: https://docs.zelda-api.apius.cc/
 
 This is a school project from ESIEA, 6th semester
