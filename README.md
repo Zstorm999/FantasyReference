@@ -1,5 +1,5 @@
 # FantasyReference
-An Android wiki for the Legend of Zelda sage.
+An Android wiki for the Legend of Zelda saga.
 
 API: https://docs.zelda-api.apius.cc/
 
