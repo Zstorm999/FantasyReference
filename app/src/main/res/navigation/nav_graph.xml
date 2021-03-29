@@ -3,13 +3,24 @@
             xmlns:app="http://schemas.android.com/apk/res-auto"
             xmlns:tools="http://schemas.android.com/tools"
             android:id="@+id/nav_graph"
-            app:startDestination="@id/BookListFragment">
+            app:startDestination="@id/GameListFragment">
 
     <fragment
-            android:id="@+id/BookListFragment"
-            android:name="com.archambeau.fantasyreference.views.list.BookListFragment"
+            android:id="@+id/GameListFragment"
+            android:name="com.archambeau.fantasyreference.views.list.GameListFragment"
             android:label="@string/first_fragment_label"
-            tools:layout="@layout/fragment_book_list">
+            tools:layout="@layout/fragment_game_list">
 
+        <action android:id="@+id/action_GameListFragment_to_GameDetailFragment"
+                app:destination="@id/GameDetailFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/GameDetailFragment"
+              android:name="com.archambeau.fantasyreference.views.list.GameDetailFragment"
+              android:label="f"
+              tools:layout="@layout/fragment_game_detail">
+
+        <action android:id="@+id/action_GameDetailFragment_to_GameListFragment"
+                app:destination="@id/GameListFragment"/>
     </fragment>
 </navigation>

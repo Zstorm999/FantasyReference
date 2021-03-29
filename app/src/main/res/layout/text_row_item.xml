@@ -14,7 +14,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
-            tools:text="Title"/>
+            tools:text="Title" android:gravity="center_horizontal|center_vertical"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

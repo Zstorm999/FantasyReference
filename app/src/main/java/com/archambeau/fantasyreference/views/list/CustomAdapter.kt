@@ -7,23 +7,25 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.archambeau.fantasyreference.R
 
-class CustomAdapter (private var dataSet: List<String>) :
+class CustomAdapter (private var dataSet: List<Game>/*, var listener: ((Game)->Unit)? = null*/) :
     RecyclerView.Adapter<CustomAdapter.ViewHolder>()
 {
 
+
     class ViewHolder(view : View) : RecyclerView.ViewHolder(view){
-        val textView : TextView
+        val textView : TextView = view.findViewById(R.id.list_item)
 
         init {
             //Need to set a valid view for this
-            textView = view.findViewById(R.id.list_item)
         }
     }
 
-    fun UpdateList(list: List<String>){
+    fun UpdateList(list: List<Game>){
         dataSet = list
         notifyDataSetChanged()
     }
+
+
 
     override fun onCreateViewHolder(viewGroup : ViewGroup, viewType : Int) : ViewHolder{
         val view = LayoutInflater.from(viewGroup.context)
@@ -32,7 +34,14 @@ class CustomAdapter (private var dataSet: List<String>) :
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.textView.text = dataSet[position]
+
+        val game = dataSet[position]
+        holder.textView.text = game.name
+
+        /*holder.itemView.setOnClickListener{
+            listener?.invoke(game)
+        }*/
+
     }
 
     override fun getItemCount() = dataSet.size
