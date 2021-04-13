@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.archambeau.fantasyreference.R
@@ -19,7 +20,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 class GameListFragment : Fragment() {
 
     private lateinit var recyclerView : RecyclerView
-    private val adapter = CustomAdapter(listOf())
+    private val adapter = CustomAdapter(listOf(), ::onItemClicked)
     private val layoutManager = LinearLayoutManager(context)
 
 
@@ -69,7 +70,7 @@ class GameListFragment : Fragment() {
     }
 
     private fun onItemClicked(game: Game) {
-
+        findNavController().navigate(R.id.action_GameListFragment_to_GameDetailFragment)
     }
 
 }

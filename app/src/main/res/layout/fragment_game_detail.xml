@@ -7,4 +7,14 @@
         android:layout_height="match_parent"
         tools:context=".views.list.GameDetailFragment">
 
+    <Button
+            android:id="@+id/gamedetail_goback_button"
+            android:text="@string/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+    />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

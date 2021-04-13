@@ -7,9 +7,10 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.archambeau.fantasyreference.R
 
-class CustomAdapter (private var dataSet: List<Game>/*, var listener: ((Game)->Unit)? = null*/) :
+class CustomAdapter (private var dataSet: List<Game>, var listener: ((Game)->Unit)? = null) :
     RecyclerView.Adapter<CustomAdapter.ViewHolder>()
 {
+
 
 
     class ViewHolder(view : View) : RecyclerView.ViewHolder(view){
@@ -38,9 +39,10 @@ class CustomAdapter (private var dataSet: List<Game>/*, var listener: ((Game)->U
         val game = dataSet[position]
         holder.textView.text = game.name
 
-        /*holder.itemView.setOnClickListener{
+
+        holder.itemView.setOnClickListener{
             listener?.invoke(game)
-        }*/
+        }
 
     }
 
