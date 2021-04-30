@@ -1,4 +1,4 @@
-package com.archambeau.fantasyreference.views.list
+package com.archambeau.fantasyreference.views.game
 
 
 import android.os.Bundle
@@ -6,11 +6,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.archambeau.fantasyreference.R
+import com.archambeau.fantasyreference.presenter.game.GameDetailPresenter
+import com.archambeau.fantasyreference.views.CustomFragment
 
-class GameDetailFragment : Fragment(){
+class GameDetailFragment : CustomFragment (){
+    override val presenter = GameDetailPresenter(this)
+
 
     override fun onCreateView(inflater: LayoutInflater,
                               container: ViewGroup?,
@@ -26,5 +29,8 @@ class GameDetailFragment : Fragment(){
         backButton.setOnClickListener {
             findNavController().navigate(R.id.action_GameDetailFragment_to_GameListFragment)
         }
+
+        presenter.init()
+
     }
 }

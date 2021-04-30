@@ -7,7 +7,7 @@
 
     <fragment
             android:id="@+id/GameListFragment"
-            android:name="com.archambeau.fantasyreference.views.list.GameListFragment"
+            android:name="com.archambeau.fantasyreference.views.game.GameListFragment"
             android:label="@string/first_fragment_label"
             tools:layout="@layout/fragment_game_list">
 
@@ -16,7 +16,7 @@
     </fragment>
 
     <fragment android:id="@+id/GameDetailFragment"
-              android:name="com.archambeau.fantasyreference.views.list.GameDetailFragment"
+              android:name="com.archambeau.fantasyreference.views.game.GameDetailFragment"
               android:label="f"
               tools:layout="@layout/fragment_game_detail">
 

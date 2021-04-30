@@ -1,6 +1,6 @@
-package com.archambeau.fantasyreference.api
+package com.archambeau.fantasyreference.model.api
 
-import com.archambeau.fantasyreference.views.list.Game
+import com.archambeau.fantasyreference.data.Game
 
 data class GamesResponse(
     val success : Boolean,

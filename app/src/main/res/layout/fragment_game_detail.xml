@@ -5,7 +5,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".views.list.GameDetailFragment">
+        tools:context=".views.game.GameDetailFragment">
 
     <Button
             android:id="@+id/gamedetail_goback_button"
