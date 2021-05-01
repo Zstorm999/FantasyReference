@@ -6,17 +6,13 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.archambeau.fantasyreference.R
-import com.archambeau.fantasyreference.data.Game
+import com.archambeau.fantasyreference.presenter.Game
 
 class GameListAdapter (private var dataSet: List<Game>, var listener: ((Game)->Unit)? = null) :
     RecyclerView.Adapter<GameListAdapter.ViewHolder>()
 {
     class ViewHolder(view : View) : RecyclerView.ViewHolder(view){
         val textView : TextView = view.findViewById(R.id.list_item)
-
-        init {
-            //Need to set a valid view for this
-        }
     }
 
     fun UpdateList(list: List<Game>){

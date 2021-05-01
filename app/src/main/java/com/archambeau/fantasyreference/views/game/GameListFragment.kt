@@ -8,7 +8,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.archambeau.fantasyreference.R
-import com.archambeau.fantasyreference.data.Game
+import com.archambeau.fantasyreference.presenter.Game
 import com.archambeau.fantasyreference.presenter.game.GameListPresenter
 import com.archambeau.fantasyreference.views.CustomFragment
 
