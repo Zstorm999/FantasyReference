@@ -31,7 +31,7 @@ class GameListPresenter(override val fragment: GameListFragment) : Presenter(fra
         }
 
         override fun onPostExecute(games : List<Game>){
-            this@GameListPresenter.fragment.adapter.UpdateList(games);
+            this@GameListPresenter.fragment.adapter.UpdateList(games)
         }
 
     }
@@ -63,11 +63,10 @@ class GameListPresenter(override val fragment: GameListFragment) : Presenter(fra
 
                     Thread{
                         games.forEach {
-                            try{
-                                DBManager.games.getID(it.APIId)
-                            }
-                            catch (e : Exception) {
-                                DBManager.games.insertAll(Converters.game_PresenterToDB(it))
+
+                            if(DBManager.games.countWithID(it.APIId) == 0){
+
+                                    DBManager.games.insertAll(Converters.game_PresenterToDB(it))
                             }
                         }
                     }.start()
@@ -81,7 +80,7 @@ class GameListPresenter(override val fragment: GameListFragment) : Presenter(fra
     }
 
     fun loadFailure(){
-        var loadingBar : ProgressBar? = fragment.view?.findViewById(R.id.progressBar)
+        val loadingBar : ProgressBar? = fragment.view?.findViewById(R.id.progressBar)
 
         loadingBar?.isInvisible = true
         loadingBar?.isEnabled = false

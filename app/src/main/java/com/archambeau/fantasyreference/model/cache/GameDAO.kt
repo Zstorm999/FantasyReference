@@ -20,4 +20,7 @@ interface GameDAO {
     @Query("SELECT * FROM games WHERE id = :id")
     fun getID(id: String):  DBEntities.Game
 
+    @Query("SELECT COUNT(*) FROM games WHERE id = :id")
+    fun countWithID(id: String): Int
+
 }
