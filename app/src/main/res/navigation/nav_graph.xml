@@ -12,7 +12,8 @@
             tools:layout="@layout/fragment_game_list">
 
         <action android:id="@+id/action_GameListFragment_to_GameDetailFragment"
-                app:destination="@id/GameDetailFragment"/>
+                app:destination="@id/GameDetailFragment"
+        />
     </fragment>
 
     <fragment android:id="@+id/GameDetailFragment"
@@ -21,6 +22,9 @@
               tools:layout="@layout/fragment_game_detail">
 
         <action android:id="@+id/action_GameDetailFragment_to_GameListFragment"
-                app:destination="@id/GameListFragment"/>
+                app:destination="@id/GameListFragment"
+        />
+        <argument android:name="game"
+                  app:argType="com.archambeau.fantasyreference.presenter.Game"/>
     </fragment>
 </navigation>

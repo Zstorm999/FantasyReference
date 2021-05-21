@@ -4,6 +4,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 import androidx.recyclerview.widget.RecyclerView
 import com.archambeau.fantasyreference.R
 import com.archambeau.fantasyreference.presenter.Game
@@ -14,6 +16,13 @@ class GameListAdapter (private var dataSet: List<Game>, var listener: ((Game)->U
     class ViewHolder(view : View) : RecyclerView.ViewHolder(view){
         val textView : TextView = view.findViewById(R.id.list_item)
     }
+
+    class ListViewModel : ViewModel() {
+        val currentList : MutableLiveData<List<Game>> by lazy{
+            MutableLiveData<List<Game>>()
+        }
+    }
+
 
     fun UpdateList(list: List<Game>){
         dataSet = list

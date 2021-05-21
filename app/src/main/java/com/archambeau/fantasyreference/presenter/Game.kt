@@ -3,6 +3,7 @@ package com.archambeau.fantasyreference.presenter
 
 import android.util.Log
 import com.archambeau.fantasyreference.model.api.APIResponse
+import java.io.Serializable
 import java.lang.Exception
 import java.text.SimpleDateFormat
 import java.util.*
@@ -16,10 +17,8 @@ data class Game(
     val publisher: String,
     val _releasedDate: Date,
 
-) {
-
-
-
+) : Serializable
+{
     var releasedDate: Date = _releasedDate
         private set
 

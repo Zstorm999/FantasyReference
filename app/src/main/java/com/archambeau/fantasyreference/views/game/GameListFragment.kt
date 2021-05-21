@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -48,9 +49,11 @@ class GameListFragment() : CustomFragment() {
 
     //TODO: move this to presenter
     private fun onItemClicked(game: Game) {
-        findNavController().navigate(R.id.action_GameListFragment_to_GameDetailFragment)
-    }
 
+        val bundle = bundleOf("game" to game)
+
+        findNavController().navigate(R.id.action_GameListFragment_to_GameDetailFragment, bundle)
+    }
 
 
 }
