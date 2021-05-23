@@ -46,7 +46,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:layout_marginBottom="10dp" android:layout_marginTop="10dp"/>
+                    android:layout_marginBottom="10dp" android:layout_marginTop="10dp" android:textSize="24sp"
+                    android:fontFamily="@font/triforce" android:textColor="#FF0000"/>
 
             <TextView
                     android:id="@+id/gamedetail_date_label"
@@ -117,7 +118,7 @@
                     android:text="Description"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"/>
+                    android:layout_marginTop="20dp"/>
         </TableLayout>
     </ScrollView>
 

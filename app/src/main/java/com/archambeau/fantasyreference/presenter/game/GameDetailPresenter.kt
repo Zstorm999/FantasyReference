@@ -42,7 +42,7 @@ class GameDetailPresenter(override val fragment: GameDetailFragment) : Presenter
         if(game.releasedDate == Date(0))
             fragment.dateLabel.text = fragment.getString(R.string.unknown_release)
         else
-            fragment.dateLabel.text = SimpleDateFormat("dd MMMM, yyyy", Locale.UK).format(game.releasedDate)
+            fragment.dateLabel.text = SimpleDateFormat("dd MMMM yyyy", Locale.UK).format(game.releasedDate)
 
         fragment.devLabel.text = game.developer
         fragment.publisherLabel.text = game.publisher
