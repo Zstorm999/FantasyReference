@@ -15,6 +15,6 @@ class GameDetailPresenter(override val fragment: GameDetailFragment) : Presenter
 
         fragment.nameLabel.text = game.name
         fragment.descriptionLabel.text = game.description
-        fragment.dateLabel.text = SimpleDateFormat("dd mm, yyyy").format(game.releasedDate)
+        fragment.dateLabel.text = SimpleDateFormat("dd MMMM, yyyy").format(game.releasedDate)
     }
 }
