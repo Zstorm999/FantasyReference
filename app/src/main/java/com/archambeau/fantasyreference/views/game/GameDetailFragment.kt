@@ -18,6 +18,8 @@ class GameDetailFragment : CustomFragment (){
     lateinit var nameLabel : TextView
     lateinit var descriptionLabel : TextView
     lateinit var dateLabel : TextView
+    lateinit var devLabel : TextView
+    lateinit var publisherLabel : TextView
 
     override fun onCreateView(inflater: LayoutInflater,
                               container: ViewGroup?,
@@ -37,6 +39,8 @@ class GameDetailFragment : CustomFragment (){
         nameLabel = view.findViewById(R.id.gamedetail_name_label)
         descriptionLabel = view.findViewById(R.id.gamedetail_description_label)
         dateLabel = view.findViewById(R.id.gamedetail_date_label)
+        devLabel = view.findViewById(R.id.gamedetail_developer_label)
+        publisherLabel = view.findViewById(R.id.gamedetail_publisher_label)
 
         presenter.init()
 

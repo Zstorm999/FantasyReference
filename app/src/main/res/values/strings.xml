@@ -14,4 +14,7 @@
     <string name="back">Back</string>
 
     <string name="unknown_release">Unknown release date</string>
+
+    <string name="published_by">Published by </string>
+    <string name="developed_by">Developed by </string>
 </resources>

@@ -15,6 +15,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
     />
+
     <ImageView
             android:layout_width="match_parent"
             android:layout_height="187dp"
@@ -33,7 +34,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView"
             app:layout_constraintHorizontal_bias="0.0" android:layout_marginTop="40dp">
-        <LinearLayout
+        <TableLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -44,21 +45,80 @@
                     android:text="Title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-            />
+                    android:gravity="center_horizontal"
+                    android:layout_marginBottom="10dp" android:layout_marginTop="10dp"/>
+
             <TextView
                     android:id="@+id/gamedetail_date_label"
                     android:text="Date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
             />
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center" android:layout_marginTop="10dp" android:layout_marginBottom="10dp">
+
+                <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:layout_weight="1"/>
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal">
+                    <TextView
+                            android:text="@string/developed_by"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/gamedetail_developed_by_label"
+                    />
+                    <TextView
+                            android:text="TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/gamedetail_developer_label"
+                    />
+                </LinearLayout>
+
+                <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:layout_weight="1"/>
+
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal">
+                    <TextView
+                            android:text="@string/published_by"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/gamedetail_published_by_label"
+                    />
+                    <TextView
+                            android:text="TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/gamedetail_publisher_label"
+                    />
+                </LinearLayout>
+                <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:layout_weight="1"/>
+
+
+            </LinearLayout>
+
             <TextView
                     android:id="@+id/gamedetail_description_label"
                     android:text="Description"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-
-            />
-        </LinearLayout>
+                    android:layout_marginTop="10dp"/>
+        </TableLayout>
     </ScrollView>
 
 
