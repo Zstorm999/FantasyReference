@@ -12,4 +12,6 @@
 
     <string name="list_element">Element</string>
     <string name="back">Back</string>
+
+    <string name="unknown_release">Unknown release date</string>
 </resources>

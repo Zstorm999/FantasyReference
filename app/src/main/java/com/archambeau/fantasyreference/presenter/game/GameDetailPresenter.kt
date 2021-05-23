@@ -1,10 +1,11 @@
 package com.archambeau.fantasyreference.presenter.game
 
+import com.archambeau.fantasyreference.R
 import com.archambeau.fantasyreference.presenter.Game
 import com.archambeau.fantasyreference.presenter.Presenter
 import com.archambeau.fantasyreference.views.game.GameDetailFragment
-import java.text.DateFormat
 import java.text.SimpleDateFormat
+import java.util.*
 
 class GameDetailPresenter(override val fragment: GameDetailFragment) : Presenter(fragment){
 
@@ -15,6 +16,10 @@ class GameDetailPresenter(override val fragment: GameDetailFragment) : Presenter
 
         fragment.nameLabel.text = game.name
         fragment.descriptionLabel.text = game.description
-        fragment.dateLabel.text = SimpleDateFormat("dd MMMM, yyyy").format(game.releasedDate)
+
+        if(game.releasedDate == Date(0))
+            fragment.dateLabel.text = fragment.getString(R.string.unknown_release)
+        else
+            fragment.dateLabel.text = SimpleDateFormat("dd MMMM, yyyy", Locale.UK).format(game.releasedDate)
     }
 }
