@@ -16,7 +16,7 @@ The goal of this project was to create an app that would include the following:
 
 The app is based around the API given above. It requests the API via internet connection to obtain its informations. Once they have been downloaded, they are displayed on screen to be viewed by the user, and also stored in a Room Database which serves as cache.
 
-The user can click on an item in the list to display more details about the game, like its original release date, producer, developer and a short description.
+The user can click on an item in the list to display more details about the game, like its original release date, publisher, developer and a short description.
 
 The application is built around the MVP architecture.
 
